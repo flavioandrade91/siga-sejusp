@@ -1,0 +1,47 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4">
+    <h2 class="text-center mb-4">Identifique-se no SIGA</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmitLoginForm()">
+      <!-- Campo de CPF -->
+      <div class="mb-3">
+        <label for="cpf" class="form-label">CPF</label>
+        <input
+          type="text"
+          id="cpf"
+          class="form-control"
+          placeholder="CPF"
+          formControlName="cpf"
+          required
+        />
+        <!-- Mensagens de erro de validação do CPF -->
+        <div>
+          <small  class="text-danger">CPF é obrigatório.</small>
+          <small class="text-danger">CPF inválido.</small>
+        </div>
+      </div>
+
+      <!-- Campo de Senha -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Senha</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          placeholder="Senha"
+          formControlName="password"
+          required
+        />
+        <!-- Mensagens de erro de validação da senha -->
+        <div>
+          <small class="text-danger">Senha é obrigatória.</small>
+        </div>
+      </div>
+
+      <!-- Botão de login -->
+      <button type="submit" class="btn btn-danger w-100">FAZER LOGIN</button>
+    </form>
+
+    <!-- Link para recuperação de senha -->
+    <a href="#" class="d-block text-center mt-3 text-danger">ESQUECI MINHA SENHA</a>
+  </div>
+</div>
